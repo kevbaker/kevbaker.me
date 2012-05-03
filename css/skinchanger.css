@@ -1,0 +1,61 @@
+/* you can delete this, after going live */
+#skinChanger {
+	position: absolute;
+	top: 15px; 
+	left: 15px;
+	color: #fff;
+	font-size: 10px;
+	text-align: left;
+}
+
+#skinChanger .pulldown{
+	padding: 5px;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 0 5px;
+}
+
+#skinChanger .title {
+	font-weight: bold; 
+	padding: 5px;
+}
+
+#skinChanger li { 
+	padding: 5px;
+	border-bottom: 1px dotted #333;
+}
+#skinChanger li.last { border-bottom: 0 none; }
+
+#skinChanger a { 
+	display: block; 
+	color: #fff;
+	text-decoration: none; 
+	line-height: 16px;
+}
+
+#skinChanger ul a { color: #aaa; }
+#skinChanger ul.bg a {
+	padding-left: 22px;	
+	background: transparent url(img/bg-sprite-skinchanger.png) scroll 0 0 no-repeat;
+}
+#skinChanger ul.bg .metal a 	  	{ background-position: 0 0; }
+#skinChanger ul.bg .grain a	  		{ background-position: 0 -16px; }
+#skinChanger ul.bg .scanlines a 	{ background-position: 0 -32px; }
+#skinChanger ul.bg .carbon a	  	{ background-position: 0 -48px; }
+#skinChanger ul.bg .wood a  	  	{ background-position: 0 -64px; }
+#skinChanger ul.bg .grain-carbon a 	{ background-position: 0 -80px; }
+
+#skinChanger li.current a { color: #FF9; }
+#skinChanger .title a img { margin: 0 3px 0 0; width: 9px; height: 9px; background: transparent url(img/ico-plus-minus.png) scroll 0 0 no-repeat; }
+#skinChanger .title a.open img { background-position: 0 -9px }
+
+#skinChanger ul.color li span { display: block; float: left; width: 12px; height: 12px; margin: 1px 5px 0 0; }
+#skinChanger li.blue span 	{ background-color: #069; }
+#skinChanger li.mint span 	{ background-color: #0C9; }
+#skinChanger li.green span 	{ background-color: #393; }
+#skinChanger li.orange span { background-color: #F93; }
+#skinChanger li.red span 	{ background-color: #C00; }
+#skinChanger li.purple span { background-color: #F09; }

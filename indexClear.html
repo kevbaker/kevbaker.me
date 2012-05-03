@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>G1 - Glassify vCard Portfolio 1.06</title>
+	
+	<!-- META DESCRIPTIONS -->
+	<meta name="title" content="G1 - Glassify vCard Portfolio 1.06" lang="en" /> 
+	<meta name="keywords" content="add your keywords here" lang="en" /> 
+	<meta name="description" content="Add your description here" lang="en" /> 
+	<meta name="ABSTRACT" content="" lang="en" /> 
+	<meta name="ROBOTS" content="ALL" /> 
+	<meta name="revisit-after" content="7 days" /> 
+	<meta name="author" content="John Doe, http://www.john-doe.com" /> 	
+	<!--END META DESCRIPTIONS-->
+	
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Color theme -->
+	<link id="cssColor" href="css/colors/blue.css" rel="stylesheet" type="text/css" />	
+	
+	<!--imports jquery and tools for jquery --> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.cycle.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.prettyPhoto.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.tipsy.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.form.min.js"></script>
+	
+	<!--imports cufon and cufon font--> 
+	<script type="text/javascript" src="javascript/cufon.min.js"></script>
+	<script type="text/javascript" src="javascript/Arial_400-Arial_700.font.js"></script>
+	
+	<!--imports custom javascript code--> 
+	<script type="text/javascript" src="javascript/custom.js"></script>
+
+	
+</head>
+
+<body class="grain">
+	
+	<div id="wrapper">	
+		<div id="main">				
+			<div class="container">	
+					
+				<!--BEGIN HEADER-->
+				<div id="header"><a href="index.html">John Doe - Freelance Graphic/Web &amp; UI-Designer</a></div>
+				<!--//end div #header-->
+				<!--END HEADER-->
+				
+				<div id="vcard">				
+
+					<div id="slider">
+						<div class="overlay"></div>
+						<div class="items">
+							- put Slider Images here -
+						</div>
+					</div><!--//end div #slider-->
+				
+					<div id="navigation" class="clearfix">
+						<ul>
+							<li><a href="#page1"><span>About Me</span></a></li>
+							<li><a href="#page2"><span>Work</span></a></li>
+							<li><a href="#page3"><span>Social</span></a></li>
+							<li><a href="#page4"><span>Contact</span></a></li>							
+						</ul>
+						
+						<div class="icon-holder">
+							<a href="#" class="vcard tooltip" title="Download vCard of John Doe">Download vCard</a>
+							<a href="mailto:john.doe@mail.com" class="email tooltip" title="Send an Email to John Doe">Send Email</a>
+						</div>
+						
+					</div><!--//end of #navigation-->
+				
+					<!--BEGIN CONTENT-->
+					<div id="content" class="clearfix">
+						
+						<!--BEGIN ABOUT ME CONTENT-->
+						<div id="page1" class="page about">- About me Content goes here -</div>
+						<!--END ABOUT ME CONTENT-->
+						
+						<!--BEGIN WORK CONTENT-->
+						<div id="page2" class="page work">- Work Content goes here -</div>
+						<!--END WORK CONTENT-->
+						
+						<!--BEGIN SOCIAL CONTENT-->
+						<div id="page3" class="clearfix page social">- Social Content goes here -</div>
+						<!--END SOCIAL CONTENT-->
+						
+						<!--BEGIN CONTACT CONTENT-->
+						<div id="page4" class="page contact">- Contact Content goes here -</div>
+						<!--END SOCIAL CONTENT-->
+						
+					</div>				
+					<!--END CONTENT-->
+										
+				</div><!--//end div #vcard-->					
+			</div>	
+		</div><!--//end of #main-->
+	
+		<!--BEGIN FOOTER-->
+		<div id="footer">
+			<div class="container">
+				- Footer Content goes here -		
+			</div>
+		</div><!--//end div #footer-->
+		<!--END FOOTER-->
+		
+	</div><!--//end div #wrapper-->
+
+
+	<script type="text/javascript">
+		//<![CDATA[
+		// Init Fade Slider on page ready
+		$(function(){
+			$('#slider .items').before('<div class="nav">').cycle({ 
+				fx:      'fade',
+				timeout:  4000,
+				pager: 	'#slider .nav'
+			});
+	   });
+		//]]>-->
+	</script>
+</body>
+</html>

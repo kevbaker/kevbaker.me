@@ -1,0 +1,14 @@
+/** Styles for Mint Theme **/
+#header a  {
+	background: transparent url(../img/colors/orange/bg-logo.png) scroll 0 0 no-repeat; 
+}
+#navigation li a span { 
+	background: transparent url(../img/colors/orange/bg-navigation-hover.png) scroll 100% -60px no-repeat;
+}
+#navigation .icon-holder a { 
+	background: transparent url(../img/colors/orange/bg-sprite-navicon.png) scroll 0 0 no-repeat; 
+}
+
+#slider .nav a.current {
+	background: #000; background: rgba(143,84,47,0.75); 
+}

@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+/*------------------------------
+=BASIC SETUP
+------------------------------*/
+
+/* Makeshift CSS Reset */
+body, h1, h2, h3, h4, h5, h6, a, p, ul, ol, li, em, strong, pre, code, form {
+ padding: 0;
+ margin: 0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+html { height: 100%;  }
+
+body {
+	font: 13px Arial, Helvetica, sans-serif;
+	line-height: 1;
+	background: black;
+	height: 100%;
+	padding: 0;
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+h2 {
+	font-size: 20px;
+	letter-spacing: -0.04em;
+	padding-bottom: 18px;
+	color: #0c3244;
+}
+
+
+h3 {
+	font-size: 15px;
+	padding: 0;
+	color: #0c3244;
+}
+
+p {	padding-bottom: 15px; }
+
+ul, ul li { list-style: none; }
+
+:focus { outline: none; }
+
+.italic		 { font-style:italic; }
+.strong		 { font-weight: bold; }
+.hidden 	 { display: none; }
+.align-right { text-align: right; }
+.align-left  { text-align: left; }
+.center		 { text-align: center; }
+
+.red { color: #F00; }
+.green { color: #060 }
+
+a:link, a:visited { color: #666; }
+a:hover, a:active { color: #333; }
+a img { border: 0 none; }
+
+
+/*------------------------------
+=BODY SETUP
+------------------------------*/
+
+body { text-align: center; color: #3A474E;  }
+
+body.grain { background: #121212 url(img/background/bg-grain.jpg) scroll 50% 0 repeat-x; }
+body.metal { background: #0b0b0b url(img/background/bg-metal.jpg) scroll 50% 0 repeat-x; }
+body.wood  { background: #0b0b0b url(img/background/bg-wood.jpg) scroll 50% 0 repeat-x }
+body.scanlines  { background: #1b1b1b url(img/background/bg-scanlines.jpg) scroll 50% 0 repeat-x }
+body.carbon  { background: #1b1b1b url(img/background/bg-carbon.jpg) scroll 50% 0 repeat-x }
+body.grain-carbon  { background: #121212 url(img/background/bg-grain-carbon.jpg) scroll 50% 0 repeat-x }
+
+/*------------------------------
+=MAIN WRAPPER SETUP
+------------------------------*/
+
+#main 	 { z-index: 101; }
+#wrapper { width: 828px; margin: 0 auto; text-align: left; padding: 10px 0; background: transparent url(img/bg-glow-top.png) scroll 0 -50px no-repeat; }
+#vcard	 { padding: 20px 84px; background: transparent url(img/bg-vcard.png) 50% 0 no-repeat; position: relative; }
+#slider	 { height: 89px; }
+
+/*------------------------------
+=HEADER & LOGO SETUP
+------------------------------*/
+
+#header a { 
+	display: block; 
+	width: 400px; 
+	height: 84px; 
+	text-indent: -999em;
+	margin: 0 0 0 73px;
+}
+
+#hireMe { 
+	position: absolute; 
+	top: -48px; right: 50px; 
+	width: 84px; 
+	height: 97px; 
+	background: transparent url(img/bg-hire-badge.png) scroll 0 0 no-repeat; 
+	text-indent: -999em; 
+	z-index: 101;
+}
+
+/*------------------------------
+=NAVIGATION SETUP
+------------------------------*/
+
+#navigation { position: relative; height: 72px; margin: 0 20px; background: transparent url(img/bg-navigation.png) scroll 50% 0 no-repeat }
+#navigation li { float: left; background: transparent url(img/bg-navigation-divider.png) scroll 100% 50% no-repeat; }
+#navigation li a { 
+	display: block;
+	margin: 1px 1px 0 0;
+	height: 60px; 
+	line-height: 60px; 
+	color: #fff; 
+	font-size: 15px; 
+	text-decoration: none; 
+	background: transparent url(img/bg-navigation-hover.png) scroll 0 -60px no-repeat;
+}
+
+#navigation li a span { display: block; padding: 0 19px 0 20px; }
+
+#navigation li a:link, a:visited { background-position: 0 -60px; }
+#navigation li a:hover, 
+#navigation li a:active, 
+#navigation li.current a { 
+	background-position: 0 0;
+}
+#navigation li a:hover span, 
+#navigation li a:active span,
+#navigation li.current a span { 
+	background-position: 100% 0; 
+}
+
+#navigation .icon-holder { position: absolute; right: 14px; top: 14px; }
+#navigation .icon-holder a { 
+	float: left;
+	display: block; 
+	text-indent: -999em; 
+	width: 32px; 
+	height: 32px;
+	margin-right: 4px;
+}
+
+/** hover for vcard icon **/
+#navigation .icon-holder a.vcard:link, #navigation .icon-holder a.vcard:visited { background-position: 0 0; }
+#navigation .icon-holder a.vcard:hover, #navigation .icon-holder a.vcard:active { background-position: -32px -32px; }
+
+/** hover for email icon **/
+#navigation .icon-holder a.email:link, #navigation .icon-holder a.email:visited { background-position: -64px -64px; }
+#navigation .icon-holder a.email:hover, #navigation .icon-holder a.email:active { background-position: -96px -96px; }
+
+/*------------------------------
+=CONTENT SETUP
+------------------------------*/
+
+#content { padding: 0 87px 100px; margin: 8px -60px; line-height: 1.5; background: transparent url(img/bg-content.png) 50% 100% no-repeat }
+#content .page { display: none; padding: 0 20px 20px; background: #fff; }
+
+#content img.inline { display: block; margin: 0 0 13px; float: left;}
+#content img.right { float: right; margin-left: 13px; }
+#content img.about { margin-top: -41px; }
+
+/** Header image slider **/
+#slider { position: relative; margin: 0 20px; }
+#slider .items { width: 620px; height: 88px; position: relative; z-index: 99 }
+#slider .items img { width: 618px; height: 88px; }
+#slider .overlay { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 620px; 
+	height: 88px; 
+	background: transparent url(img/header-lense-overlay.png) scroll 50% 0 no-repeat; 
+	z-index: 100;
+}
+
+#slider .nav  { position: absolute; bottom: 10px; right: 10px; z-index: 101; }
+#slider .nav a { display: block; float: left; width: 10px; height: 10px; text-indent: -999em; background: #fff; background: rgba(255,255,255,0.75); margin: 0 5px 0 0; }
+
+/** Nivo Header Slider **/
+#slider .nivo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slider .nivo-directionNav { top: 30%; }
+#slider .nivo-directionNav a {
+	background: url(img/nivoslider/arrows.png) no-repeat;
+	border: 0;
+	display: block;
+	height: 30px;
+	text-indent: -9999px;
+	width: 30px;
+}
+
+#slider a.nivo-nextNav {
+	background-position: -30px 0px;
+	right: 15px;
+}
+
+#slider a.nivo-prevNav {
+	left: 15px;
+}
+
+/*------------------------------
+=PAGES SETUP
+------------------------------*/
+
+/** About **/
+#page1 .skills { float: left; padding: 8px 0; margin: 0 30px 0 0; }
+#page1 .skills li { 
+	color: #666; 
+	font-style: italic; 
+	padding: 3px 8px 3px 25px; 
+	margin: 0 5px 4px 0;
+	background: #eee url(img/ico-tick-16.png) 6px 3px no-repeat; 
+	font-size: 82%;
+}
+
+/** Work **/
+.work { position: relative; }
+.work ul { float: left; width: 560px }
+.work .items { z-index: 99; }
+
+.work li { float: left; width: 110px; margin: 0 32px 15px 0; position: relative; font-size: 11px; }
+.work li a {  background: transparent url(img/bg-thmb-shadow.png) 50% 50% no-repeat; padding-bottom: 5px; display: block; }
+.work li.last { margin-right: 0; }
+.work li img { display: block; width: 104px; height: 64px; padding: 2px; border: 1px solid #eee; background: #fff; }
+.work li a span { position: absolute; top: 3px; left: 3px; display: none; width: 108px; height: 68px; background: transparent url(img/bg-thmb-overlay.png) 0 0 no-repeat; }
+.work li p { padding: 0 0 5px; }
+.work li.video a span { background: transparent url(img/bg-video-overlay.png) 0 0 no-repeat; }
+
+
+.work .items { height: 200px; width: 560px; }
+.work .galnav  { position: absolute; top: 50px; right: 25px; } 
+.work .galnav a { display: block; float: left; font-size: 10px; color: #999; text-decoration: none; padding: 3px 5px; }
+
+.alternate-work .items { height: 300px; }
+
+/** Social  **/
+.social .networks { float: left; width: 45%; margin: 0 2% 0 0;  }
+.social .networks li  { color: #a0a4a7; line-height: 1.1; margin: 0 10px 10px 0; cursor: pointer; }
+.social .networks a { 
+	display: block; 
+	color: #a0a4a7; 
+	text-decoration: none; 
+	padding: 8px 8px 8px 50px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border-radius: 5px; 
+}
+.social .networks a:hover { background: #eee; color: #006692 }
+.social .networks .title  { display: block; font-weight: bold; font-size: 17px; color: #444; }
+.social .networks img { 
+	float:left; 
+	width: 32px; 
+	height: 32px; 
+	margin: 0 0 0 -42px; 
+	background: transparent url(img/bg-sprite-social.png) scroll 0 0 no-repeat;
+}
+.social img.facebook { background-position: 0 0; }
+.social img.twitter  { background-position: -32px -32px; }
+.social img.flickr   { background-position: -64px -64px; }
+.social img.lastfm   { background-position: -96px -96px; }
+.social img.linkedin { background-position: -128px -128px; }
+.social img.skype	  { background-position: -160px -160px; }
+
+/** Contact page **/
+.contact { color: #6a6a6a; }
+.contact .left  { float: left; width: 210px; }
+.contact .right { float: right; width: 300px; }
+
+/*------------------------------
+=FORM SETUP
+------------------------------*/
+
+form li { clear: left; margin: 0 0 5px; }
+form label { width: 27%; display: block; float: left; line-height: 1.4em; padding: 3px 0 0; font-size: 15px; }
+form input, form textarea {
+	width: 210px;
+	background: transparent url(img/form/bg-input.png) center top repeat-x; 
+	border: 1px solid #d1d1d1; 
+	padding: 5px 3px;
+	margin: 0;
+	float: left;
+	
+	resize: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+}
+
+form .input-wrapper { width: 70%; float: left; padding-bottom: 10px; background: transparent url(img/form/bg-input-shadow.png) scroll 50% 100% no-repeat; }
+
+form colors/purple/, form .colors/purple/ { 
+	border: 1px solid #ccc; 
+	background: transparent url(img/form/bg-form-btn.png) 0 0 repeat-x; 
+	padding: 4px 10px; 
+	line-height: 1; 
+	overflow: visible;
+	cursor: pointer;
+	height: 26px;
+	margin-left: 10px;
+}
+
+form colors/purple/:hover, form .colors/purple/:hover { background-position: 0 -25px; }
+
+/*------------------------------
+=FOOTER SETUP
+------------------------------*/
+
+#footer { position: relative; width: 620px; margin: -80px auto 0; text-align: left; color: #a2a2a2; z-index: 102 }
+
+#footer .social { float: right; margin-top: -5px; }
+#footer .social li { float: left; margin-left: 3px; }
+#footer .social a, #footer .social img { display: block; width: 16px; height: 16px;}
+#footer .social img {
+	background: transparent url(img/bg-sprite-social-small.png) scroll 0 0 no-repeat;
+}
+#footer .social img.facebook { background-position: 0 -16px; }
+#footer .social img.twitter  { background-position: -16px -32px; }
+#footer .social img.flickr   { background-position: -32px -48px; }
+#footer .social img.lastfm   { background-position: -48px -64px; }
+#footer .social img.linkedin { background-position: -64px -80px; }
+#footer .social img.skype	 { background-position: -80px -96px; }
+
+#footer .social a:hover img.facebook { background-position: 0 0; }
+#footer .social a:hover img.twitter  { background-position: -16px -16px; }
+#footer .social a:hover img.flickr   { background-position: -32px -32px; }
+#footer .social a:hover img.lastfm   { background-position: -48px -48px; }
+#footer .social a:hover img.linkedin { background-position: -64px -64px; }
+#footer .social a:hover img.skype	 { background-position: -80px -80px; }
+
+/*------------------------------
+=TIPSY TOOLTIP
+------------------------------*/
+.tipsy { padding: 5px; font-size: 10px; opacity: 0.8; filter: alpha(opacity=80); background-repeat: no-repeat;  background-image: url(img/tipsy.gif); }
+  .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
+  .tipsy-inner { -moz-border-radius:3px; -webkit-border-radius:3px; }
+  .tipsy-north { background-position: top center; }
+  .tipsy-south { background-position: bottom center; }
+  .tipsy-east { background-position: right center; }
+  .tipsy-west { background-position: left center; }
+
+/*------------------------------
+=CLEARFIX HACK
+------------------------------*/
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	font-size:0.1em;
+	visibility:hidden}	
+ 
+.clearfix {display:inline-block}  /* ... Clearing for IE5/Mac and IE7 */
+
+* html .clearfix {height:1%}   /* ... for IE5 + IE6/Win | activate IE-Clearing */
+.clearfix {display:block}      /* ... for IE5,IE6,IE7 | reset Mac-Settings for IE/Win */

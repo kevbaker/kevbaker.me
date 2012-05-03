@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* No Javascript Styles */
+#slider img { position: absolute !important }
+#gallery .galnav { display: none !important; }
+#content { overflow-y: auto !important; height: 235px; }
+#content .page { height: auto !important; padding-bottom: 30px; }

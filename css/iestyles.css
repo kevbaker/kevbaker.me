@@ -1,0 +1,2 @@
+/* Fix up PNG Support */
+img, #header a, .png, #content, #wrapper, h1, h2, h3 { behavior: url(scripts/iepngfix.htc); }
